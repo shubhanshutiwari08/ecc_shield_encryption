@@ -17,7 +17,7 @@ bcrypt = Bcrypt(app)
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="shubhanshu@08",
+    password="*********",
     database="ecc_shield"
 )
 cursor = db.cursor()
