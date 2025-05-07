@@ -1,0 +1,11 @@
+<nav>
+    <a href="/main">Home</a>
+    {% if session["user_id"] %}
+        <a href="/input">Input</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
+    {% else %}
+        <a href="/login">Login</a>
+        <a href="/signup">Signup</a>
+    {% endif %}
+</nav>

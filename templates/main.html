@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Shell | ECC Shield</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ECC Shield</div>
+        <ul class="nav-links">
+            <li><a href="/main">Home</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Welcome Message -->
+    <div class="container">
+        <h2>Welcome, {{ session['username'] }}</h2>
+        <p>This is a secure shell where you can protect your messages and files.</p>
+
+        <div class="button-group">
+            <a href="{{ url_for('input_page') }}" class="encrypt-btn">Text Encryption</a>
+            <a href="{{ url_for('file_input_page') }}" class="encrypt-btn">File Encryption</a>
+        </div>
+    </div>
+
+</body>
+</html>
